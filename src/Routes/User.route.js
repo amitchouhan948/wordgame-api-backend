@@ -20,7 +20,8 @@ app.post("/", async (req, res) => {
   console.log(req.body)
   try {
     let userData = await UserModel.create(req.body);
-    res.send(userData);
+
+    res.send(userData._id);
   } catch (e) {
     res.status(500).send(e.message);
   }
