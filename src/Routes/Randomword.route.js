@@ -26,7 +26,8 @@ app.get("/", async (req, res) => {
         res.send(word);
     }
 
-    // let word=(randomWords({exactly: 1,minLength: 4, maxLength: 8}))
+    let word=(randomWords({exactly: 1,minLength: 4, maxLength: 8}))
+    res.send(word);
 }
 catch(err){
     res.send(err)
